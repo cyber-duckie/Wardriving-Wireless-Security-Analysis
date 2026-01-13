@@ -1,3 +1,20 @@
+# Kismet / wireless capture files
+*.kismet
+*.kismetdb
+*.pcap
+*.pcapng
+
+# Wardriving data directories
+data/raw/
+data/intermediate/
+
+# Generated artifacts
+*.csv
+*.json
+*.geojson
+*.html
+output/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
