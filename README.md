@@ -93,6 +93,7 @@ This guide explains how the Python environment was set up on Windows 11 to proce
 Although I scanned the networks using Parrot OS (Linux), I later transfered the .kismet scan results to my windows machine where I did all the scripting and map generation etc. I will give a short summary below of how I setp up my windows to enable python scripting and map generation:
 
 1. Navigate to the official Python website: https://www.python.org/downloads/windows/.
+   
    - Download the latest Python version and run the installer.
    - In the installer, check 'Add Python to path'.
    -  Open Powershell and confirm the Python installation:
@@ -101,12 +102,14 @@ Although I scanned the networks using Parrot OS (Linux), I later transfered the 
 python --version
 pip --version
 ```
+
 2. Install the required python libraries for this project:
 
 ```
 pip install pandas folium
 ```
  - Verify:
+   
 ```
 python -c "import pandas, folium; print('Libraries installed successfully')"
 ```
@@ -123,20 +126,24 @@ python -c "import pandas, folium; print('Libraries installed successfully')"
 > Make sure the file extension is .py if creating the file manually.
 
 4. Run the script
+   
   - From Powershell in the folder (hold shift and right-click in the folder with the python script -> then run Powershell
 ```
 python scripts\kismet_to_map.py
 ```
 
 5. Create the 2nd python folium map generation script:
+   
   - Create a new file and name it appropriately e.g.: anonymize_kismet_data.py
   - Pull or add the map generation script under /scripts in this repo.
 
 6. Run the script
+   
   - From Powershell in the folder (hold shift and right-click in the folder with the python script -> then run Powershell
 ```
 python scripts\generate_folium_map_anonymized.py
 ```
+
   - This will output a file named: wifi_security_map.html in the same folder. Opening this with your browser shows you the folium map!
 
 
