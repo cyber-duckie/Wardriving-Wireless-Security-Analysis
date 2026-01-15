@@ -7,6 +7,12 @@ The goal is to demonstrate practical skills in wireless security assessment, dat
 
 All collected data is anonymized before analysis and no raw or identifying data is published.
 
+### Demo:
+![WiFi map Demo](images/recording.gif)
+
+### Live Map:
+👉 https://xxxxxx/
+
 ## 🎯 Objectives
 
 - Collect Wi-Fi metadata using Kismet during wardriving
