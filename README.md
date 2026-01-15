@@ -46,7 +46,7 @@ The following steps are applied before any analysis:
 
 ## 📊 Scan Results and Analysis
 
-![My scan results summarized.](/screenshots/results.png)
+![My scan results summarized.](images/results.png)
 
 Key Observations
 
