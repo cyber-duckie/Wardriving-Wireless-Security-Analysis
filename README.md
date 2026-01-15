@@ -146,6 +146,15 @@ python scripts\generate_folium_map_anonymized.py
 
   - This will output a file named: wifi_security_map.html in the same folder. Opening this with your browser shows you the folium map!
 
+### 7. Create the 3rd python script to summarize the scan data
 
+  - Create a new file and name it appropriately e.g.: summarize_wifi_security.py
+  - Pull or add the map generation script under /scripts in this repo.
 
+### 8. Run the script
+   
+  - From Powershell in the folder (hold shift and right-click in the folder with the python script -> then run Powershell
+```
+python scripts\summarize_wifi_security.py
+```
 
