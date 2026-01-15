@@ -8,7 +8,7 @@ The goal is to demonstrate practical skills in wireless security assessment, dat
 All collected data is anonymized before analysis and no raw or identifying data is published.
 
 ### Demo:
-![WiFi map Demo](images/recording.gif)
+![WiFi map Demo](images/gifs/recording.gif)
 
 ### Live Map:
 👉 https://xxxxxx/
