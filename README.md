@@ -61,6 +61,19 @@ It is intended as a learning and portfolio project, not a commercial tool.
 - Folium / Leaflet.js – interactive mapping
 - Hashing (SHA-256 + salt) for anonymization
 
+## 📋 Prerequisites
+### Hardware Requirements
+
+- WiFi USB dongle capable of being set to Monitor mode (Important!)
+- GPS Module, cheapest are USB modules
+- Laptop or other device capable of running Kismet
+
+### Software Reqauirements
+- Python 3.10+
+- pandas, folium
+- Kismet (.kismet SQLite database)
+- Web browser
+
 ## 🔐 Data Anonymization & Ethics
 
 This project does not publish raw wardriving data.
@@ -86,6 +99,26 @@ Key Observations
 - WPA3 adoption is still low
 - A notable percentage of open networks, including IoT devices
 - Legacy protocols (WEP) are rare but still present
+
+## 🧠 Lessons Learned & Challenges
+
+Doing this project for the first time I faced quite a number of obstacles at various steps of the way. These were very different problems I had to troubleshoot that were not all very apparent. I will give a short summary of the biggest hurdles I had to overcome:
+
+Working on this project for the first time presented several obstacles that required troubleshooting and careful problem-solving. Here is a summary of the main challenges and lessons learned:
+
+### Wi-Fi Adapter Compatibility
+My initial USB Wi-Fi adapter (Realtek chipset) was not compatible with monitor mode on Linux. Even though I could put it into monitor mode manually, Kismet either failed to detect networks or the adapter would freeze after multiple attempts. After researching online, I discovered that Realtek adapters often struggle with monitor mode on Linux.  
+**Solution & Lesson Learned:** I purchased an Atheros AR9271 USB adapter, which worked flawlessly without additional drivers. I learned the importance of selecting hardware that is fully compatible with your tools and OS, saving time and reducing frustration.
+
+### GPSD Coordinates Not Updating
+Although I could initially get a GPS signal from my USB GPS module, the coordinates did not update while moving. Testing with `cgps` confirmed the module was detected, but GPSD was not feeding live data to Kismet. After research, I identified multiple contributing factors on Parrot OS:
+- AppArmor was blocking GPSD from accessing the USB device (`/dev/ttyACM0`).  
+- Network Manager interfered with the GPSD socket.  
+- My user did not have sufficient permissions to access USB devices.  
+
+**Solution & Lesson Learned:** I temporarily disabled AppArmor and Network Manager, added my user to the `dialout` group, and started GPSD manually pointing to the correct USB device. After this, Kismet successfully received live GPS coordinates.  
+From this experience, I gained practical skills in Linux system administration, service troubleshooting, and understanding OS-specific security restrictions.
+
 
 ## 🛠️ Environment Setup & Map Generation (Windows 11)
 
