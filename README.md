@@ -143,7 +143,7 @@ and limited security controls.
 
 ![Anonymized Open Guest Network Example](images/open_network_redacted.png)
 
-This screenshots shows an openly accessible guest network that was picked upduring the scan. Anyone can connect and inspect all unencrypted datat traffic with packet analysis.
+This screenshots shows an openly accessible guest network that was picked up during the scan. Anyone can connect and inspect all unencrypted data traffic with packet analysis.
 
 ### WEP networks
 
