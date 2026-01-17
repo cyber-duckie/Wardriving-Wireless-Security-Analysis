@@ -102,8 +102,6 @@ Key Observations
 
 ## 🧠 Lessons Learned & Challenges
 
-Doing this project for the first time I faced quite a number of obstacles at various steps of the way. These were very different problems I had to troubleshoot that were not all very apparent. I will give a short summary of the biggest hurdles I had to overcome:
-
 Working on this project for the first time presented several obstacles that required troubleshooting and careful problem-solving. Here is a summary of the main challenges and lessons learned:
 
 ### Wi-Fi Adapter Compatibility
@@ -123,7 +121,7 @@ From this experience, I gained practical skills in Linux system administration, 
 ## 🛠️ Environment Setup & Map Generation (Windows 11)
 
 This guide explains how the Python environment was set up on Windows 11 to process Kismet data and generate the interactive map.
-Although I scanned the networks using Parrot OS (Linux), I later transfered the .kismet scan results to my windows machine where I did all the scripting and map generation etc. I will give a short summary below of how I setp up my windows to enable python scripting and map generation:
+Although I scanned the networks using Parrot OS (Linux), I later transferred the .kismet scan results to my windows machine where I did all the scripting and map generation etc. I will give a short summary below of how I set up up my windows to enable python scripting and map generation:
 
 ### 1. Navigate to the official Python website
 - https://www.python.org/downloads/windows/.
