@@ -11,7 +11,7 @@ All collected data is anonymized before analysis and no raw or identifying data 
 ![WiFi map Demo](images/gifs/recording.gif)
 
 ### Live Map
-👉 https://xxxxxx/
+👉 https://cyber-duckie.github.io/Wardriving-Wireless-Security-Analysis/
 
 ### 🗺️ Map Legend & Interpretation
 
