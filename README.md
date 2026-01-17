@@ -100,6 +100,88 @@ Key Observations
 - A notable percentage of open networks, including IoT devices
 - Legacy protocols (WEP) are rare but still present
 
+## 🔓 Why Open and WEP Networks Matter
+
+Open and WEP-secured networks represent high-risk wireless environments.
+
+### Open networks
+- No encryption → traffic can be captured and read in cleartext
+- Susceptible to man-in-the-middle attacks, rogue APs, and session hijacking
+
+Often used by:
+
+- IoT devices
+- Guest networks
+- Misconfigured home routers
+
+- ## 📸 Example Devices Observed (Anonymized)
+
+The following screenshots show anonymized examples of some weakly configured IoT devices
+I picked up on kismet during the wardriving scan. These are included for illustrative
+purposes only and do not identify specific devices, locations, or owners.
+
+### 🏠 Consumer IoT Device (Example)
+
+![Anonymized IoT Device Example](images/Insecure_Appliance_redacted.png)
+
+
+This example illustrates a consumer IoT device broadcasting a network
+with weak or legacy security settings. Such devices are commonly deployed
+with default configurations and may remain unpatched for long periods.
+
+### 🤖 Robotic Vacuum Device (Example)
+
+![Anonymized Robovac Network Example](images/Open_robo_vac_redacted.png)
+
+Robotic vacuum cleaners often rely on Wi-Fi connectivity for cloud-based
+control and telemetry. When secured improperly, these devices can introduce
+additional risk into home networks due to their persistent connectivity
+and limited security controls.
+
+
+### 🏠 Open Guest Networks (Example)
+
+![Anonymized Open Guest Network Example](images/open_network_redacted.png)
+
+This screenshots shows an openly accessible guest network that was picked upduring the scan. Anyone can connect and inspect all unencrypted datat traffic with packet analysis.
+
+### WEP networks
+
+Cryptographically broken for years
+Keys can be cracked in minutes using publicly available tools
+
+Presence of WEP indicates:
+- Legacy devices
+- Poor security awareness
+- Unmaintained infrastructure
+
+Why this matters from a defensive perspective
+- These networks are easy entry points for attackers
+- Devices connected to them can be pivot points into better-secured networks
+ -Their presence often correlates with broader security hygiene issues
+
+![Anonymized WEP Network Example](images/WEP_redacted.png)
+
+## 🔐 Why WPA3 Adoption Is Relevant
+
+WPA3 is currently the strongest widely available Wi-Fi security standard.
+
+Key improvements over WPA2:
+
+- Protection against offline password cracking
+- Forward secrecy (past traffic stays protected even if the password leaks)
+- Better security for weak passwords
+- Mandatory encryption, even on “open” WPA3 networks (OWE)
+
+Why low WPA3 adoption matters
+
+- Indicates slow security modernization
+- Shows reliance on legacy routers and firmware
+- Suggests exposure to attacks that WPA3 explicitly mitigates
+- From a security assessment standpoint:
+- WPA3 adoption is a proxy metric for how seriously security updates are taken
+- Low adoption increases long-term risk, even if WPA2 is still technically secure
+
 ## 🧠 Lessons Learned & Challenges
 
 Working on this project for the first time presented several obstacles that required troubleshooting and careful problem-solving. Here is a summary of the main challenges and lessons learned:
